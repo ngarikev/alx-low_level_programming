@@ -1,26 +1,22 @@
 #include "main.h"
 /**
- * Converts a binary number to an
+ * binary_to_uint - Converts a binary number to an
  * unsigned int.
  * @b: binary.
- * Return unsigned int.
+ * Return: unsigned number
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int kevo = 0;
 	int j;
+	unsigned int merit = 0;
 
 	if (!b)
 		return (0);
-	for (j = 0; b[j] != '\0'; j++)
+	for (j = 0; b[j]; j++)
 	{
-		if (b[j] != '0' && b[j] != '1')
+		if (b[j] < '0' || b[j] > '1')
 			return (0);
+		merit = 2 * merit + (b[j] - '0');
 	}
-	for (j = 0; b[j] != '\0'; j++)
-	{
-		kevo <<= 1;
-		if (b[j] == 1;
-	}
-	return (kevo);
+	return (merit);
 }
