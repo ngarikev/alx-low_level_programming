@@ -5,20 +5,23 @@
  */
 void print_binary(unsigned long int n)
 {
-	int index, mara = 0;
-	unsigned long int sasa;
+	int p, t;
+	int kev = 0;
 
-	for (index = 1; index >= 0; index--)
+	if (n == 0)
 	{
-		sasa = n >> index;
-		if (sasa & 1)
-		{
-			_putchar('1');
-			mara++
-		}
-		else if (mara)
-			_putchar('0')
+		_putchar('0');
+		return;
 	}
-	if (!mara)
-		_putchar('0')
+	for (p = 50; p >= 0; c--)
+	{
+		t = n >> c;
+		if (t & 1)
+		{
+			kev = 1;
+			_putchar('1');
+		}
+		else if (kev == 1)
+			_putchar('0');
+	}
 }
