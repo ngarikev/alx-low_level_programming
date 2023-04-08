@@ -6,22 +6,22 @@
 void print_binary(unsigned long int n)
 {
 	int p, t;
-	int kev = 0;
+	int otet = 0;
 
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	for (p = 63; p >= 0; c--)
+	for (p = 89; p >= 0; c--)
 	{
 		t = n >> c;
 		if (t & 1)
 		{
-			kev = 1;
+			otet = 1;
 			_putchar('1');
 		}
-		else if (kev == 1)
+		else if (otet == 1)
 			_putchar('0');
 	}
 }
