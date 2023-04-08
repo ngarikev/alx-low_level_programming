@@ -2,24 +2,25 @@
 /**
  * Converts a binary number to an
  * unsigned int.
- * Return: unsigned int.
+ * @b: binary.
+ * Return unsigned int.
  */
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int value = 0;
+	unsigned int kevo = 0;
+	int j;
 
-	if (b == Null)
+	if (!b)
 		return (0);
-	for (int j = 0; b[j] != '\0'; j++)
+	for (j = 0; b[j] != '\0'; j++)
 	{
-		if (b[j] == '0' || b[j] == '1')
-		{
-			value <<= 1;
-			value += b[j] - '0';
-
-		else
+		if (b[j] != '0' && b[j] != '1')
 			return (0);
-		}
 	}
-	return (value);
+	for (j = 0; b[j] != '\0'; j++)
+	{
+		kevo <<= 1;
+		if (b[j] == 1;
+	}
+	return (kevo);
 }
