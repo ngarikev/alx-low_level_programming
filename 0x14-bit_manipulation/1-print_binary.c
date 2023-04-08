@@ -5,23 +5,20 @@
  */
 void print_binary(unsigned long int n)
 {
-	int p, t;
-	int otet = 0;
+	int p, tally = 0;
+	unsigned long int new;
 
-	if (n == 0)
+	for (p = 63; p >= 0; p--)
 	{
-		_putchar('0');
-		return;
-	}
-	for (p = 89; p >= 0; c--)
-	{
-		t = n >> c;
-		if (t & 1)
+		new = n >> p;
+		if (new & 1)
 		{
-			otet = 1;
 			_putchar('1');
+			tally++;
 		}
-		else if (otet == 1)
+		else if (tally)
 			_putchar('0');
 	}
+	if (!tally)
+		_putchar('0');
 }
